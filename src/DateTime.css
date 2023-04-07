@@ -1,0 +1,21 @@
+.dataTime {
+    padding: 20px;
+}
+
+.dataTime h1 {
+    color: #4857ff;
+    font-weight: 700;
+    padding: 5px 20px;
+}
+
+.dataTime p {
+    color: #46464d;
+    font-weight: 700;
+    padding: 0px 20px;
+}
+
+.dataTime h3 {
+    color: #4535fa;
+    font-weight: 500;
+    padding: 20px;
+}
