@@ -28,8 +28,10 @@ function App() {
   return (
     <>{!name ?
       <div className="useName">
-        <input type="text" placeholder="Enter your Name" value={user} onChange={userName} />
-        <button className="button" onClick={() => { setName(user) }}>Enter</button>
+        <form action="">
+          <input type="text" autoFocus placeholder="Enter your Name" value={user} onChange={userName} />
+          <button className="button" onClick={() => { setName(user) }}>Enter</button>
+        </form>
       </div> :
       <div className="main">
         <div className="left">
@@ -37,7 +39,9 @@ function App() {
           <div className="input">
             <div className="inputsection">
               <i className="fa-solid fa-magnifying-glass"></i>
-              <input type="text" name="" placeholder="Search here..." id="" value={city} onChange={handler} />
+              <form action="" onSubmit={(e) => e.preventDefault()}>
+                <input type="text" autoFocus name="" placeholder="Search your city here..." id="" value={city} onChange={handler} />
+              </form>
               <i className="fa-solid fa-location-dot"></i>
             </div>
           </div>

@@ -17,6 +17,8 @@
     padding: 4px 16px;
     border: none;
     color: #3377FF;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 
@@ -121,11 +123,10 @@
     background-color: #f5f8ff;
     display: flex;
     align-items: center;
-    border: 1px solid #28ff15;
     border-radius: 16px;
     padding: 4px 20px;
     width: 100%;
-    box-shadow: #28ff15(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .inputsection i {
@@ -141,6 +142,7 @@
     padding: 4px 16px;
     color: #413dff;
     font-size: 20px;
+
 }
 
 .inputsection input::placeholder {
