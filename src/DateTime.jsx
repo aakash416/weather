@@ -40,4 +40,3 @@ function DateTime(props) {
 }
 export default DateTime;
 
-<i class="fa-thin fa-sunrise"></i>

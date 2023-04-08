@@ -1,6 +1,6 @@
-import "./WeatherMain.css"
+import "./WeatherCard.css"
 
-function WeatherMain(props) {
+function WeatherCard(props) {
     const TimeDate = new Date();
     const months = TimeDate.getMonth();
     const date = TimeDate.getDate();
@@ -8,11 +8,12 @@ function WeatherMain(props) {
 
     return (
         <><div className="weather-card">
-            {props.data ? <><div className="address">
-                <i className="fa-solid fa-location-dot"></i>
-                <p>{props.data?.name} {props.data?.sys?.country}</p>
-                <i className="fa-solid fa-angle-down"></i>
-            </div>
+            {props.data ? <>
+                <div className="address">
+                    <i className="fa-solid fa-location-dot"></i>
+                    <p>{props.data?.name} {props.data?.sys?.country}</p>
+                    <i className="fa-solid fa-angle-down"></i>
+                </div>
                 <img src={`http://openweathermap.org/img/w/${props.data?.weather[0].icon}.png`} alt="icon" />
                 <p className="date">Today, {date} {MonthsArry[months]} </p>
                 <h1> {Math.trunc(props.data?.main?.temp - 273.15)}&#176;</h1>
@@ -24,11 +25,10 @@ function WeatherMain(props) {
                 <div className="wind-hum">
                     <i className="fa-solid fa-droplet"></i>
                     <p> Hum</p>
-
                     <p>|</p> <p>{props.data?.main?.humidity} %</p>
-                </div></> : <h1>Search your place</h1>}
+                </div></> : <h2>Search your place</h2>}
 
         </div ></>
     )
 }
-export default WeatherMain;
+export default WeatherCard;

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import DateTime from "./DateTime";
-import WeatherMain from "./WeatherMain";
+import WeatherCard from "./WeatherCard";
 function App() {
   const APIkey = "d18d7d0680c1f60181ab5578e379f75a";
 
@@ -17,37 +17,27 @@ function App() {
     axios.get(url).then((response) => setData(response.data));
   }, [url]);
 
-  function handler(event) {
-    setCity(event.target.value)
-  }
-  function userName(event) {
-    setUser(event.target.value);
-  }
-
-  console.log(name)
   return (
     <>{!name ?
-      <div className="useName">
+      <div className="user-name">
         <form action="">
-          <input type="text" autoFocus placeholder="Enter your Name" value={user} onChange={userName} />
+          <input type="text" autoFocus placeholder="Enter your Name" value={user} onChange={(event) => { setUser(event.target.value) }} />
           <button className="button" onClick={() => { setName(user) }}>Enter</button>
         </form>
       </div> :
       <div className="main">
         <div className="left">
           <DateTime name={name} />
-          <div className="input">
-            <div className="inputsection">
-              <i className="fa-solid fa-magnifying-glass"></i>
-              <form action="" onSubmit={(e) => e.preventDefault()}>
-                <input type="text" autoFocus name="" placeholder="Search your city here..." id="" value={city} onChange={handler} />
-              </form>
-              <i className="fa-solid fa-location-dot"></i>
-            </div>
+          <div className="inputsection">
+            <i className="fa-solid fa-magnifying-glass"></i>
+            <form action="" onSubmit={(e) => e.preventDefault()}>
+              <input type="text" autoFocus name="" placeholder="Search your city here..." id="" value={city} onChange={(event) => { setCity(event.target.value) }} />
+            </form>
+            <i className="fa-solid fa-location-dot"></i>
           </div>
         </div>
         <div className="right">
-          <WeatherMain city={city} data={data} />
+          <WeatherCard city={city} data={data} />
         </div>
       </div>
     }

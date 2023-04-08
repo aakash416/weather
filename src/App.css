@@ -1,4 +1,4 @@
-.useName {
+.user-name {
     background: rgb(194, 204, 255);
     background: radial-gradient(circle, rgba(194, 204, 255, 1) 0%, rgba(94, 77, 255, 1) 100%);
     height: 100vh;
@@ -9,7 +9,15 @@
     align-content: center;
 }
 
-.useName input {
+.user-name form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.user-name input {
     outline: none;
     width: 280px;
     font-size: 24px;
@@ -113,19 +121,14 @@
     justify-content: center;
 }
 
-.input {
-    display: flex;
-    margin: 30px;
-
-}
-
 .inputsection {
+    margin: 30px;
     background-color: #f5f8ff;
     display: flex;
     align-items: center;
     border-radius: 16px;
     padding: 4px 20px;
-    width: 100%;
+    max-width: 450px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -134,7 +137,7 @@
     font-size: 24px;
 }
 
-.inputsection input {
+.inputsection form input {
     background-color: #f5f8ff;
     width: 100%;
     outline: none;
@@ -145,6 +148,6 @@
 
 }
 
-.inputsection input::placeholder {
+.inputsection form input::placeholder {
     color: #0400ff;
 }
